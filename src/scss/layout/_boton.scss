@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+
+.boton-negro{
+    display: inline;
+    background: transparent;
+    border: 1px solid v.$terciario;
+    padding: 1rem 2rem 2rem;
+    &:hover{
+        background-color: v.$terciario;
+        cursor: pointer;
+    };
+    a{
+        color: v.$blanco;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
+};

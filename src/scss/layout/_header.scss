@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(../img/cami.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    @include m.tablet{
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+
+    }
+}
+.main{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    &__1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__heading{
+        color: v.$gris;
+        font-weight: bold;
+        margin: 0;
+        padding: 3rem 0;
+        @include m.headings;
+        @include m.texto-fluido(3rem,5rem);
+        text-transform: uppercase;
+        line-height: 1.5;
+        padding: 1rem;
+        background-color: (rgba(0, 0, 0, 0.5));
+        border-radius: 1rem;
+    }
+    &__descripcion{
+        color: v.$gris;
+        font-weight: 400 !important;
+        margin: 0;
+        padding: 1rem;
+        @include m.headings;
+        @include m.texto-fluido(2rem,3rem);
+        text-align: center;
+        background-color: (rgba(0, 0, 0, 0.5));
+        border-radius: 1rem;
+       
+    }
+    &__img{
+        
+        height: 40%;
+        width: 40%;
+        border-radius: 1rem;
+        &--last{
+            margin-bottom: 3rem;
+        }
+    }
+    &__button{
+        @include m.boton(v.$primario,v.$blanco);
+        margin: 3rem 0 0 0;
+        font-size: 3rem;
+        border-radius: 1rem;
+    }
+    &__doble{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+.hidden{
+    display: none;
+}
